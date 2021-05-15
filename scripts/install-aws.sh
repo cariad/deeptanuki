@@ -18,5 +18,9 @@ rm -rf /tmp/aws.zip
 sudo /tmp/aws/install --update
 rm -rf /tmp/aws
 
+echo -e "${li:?}Configuring minio profile..."
+aws configure set username minio-user     --profile minio
+aws configure set password minio-password --profile minio
+
 echo -e "${ok:?}Installed AWS CLI!"
 set +e

@@ -9,16 +9,11 @@ if [ ! -d "${deepracer_dir:?}" ]; then
   git clone https://github.com/aws-deepracer-community/deepracer-for-cloud.git "${deepracer_dir:?}"
 fi
 
+echo -e "${li:?}Initializing DeepRacer for Cloud..."
 pushd "${deepracer_dir:?}"
 git checkout v3.1
-popd
-
-
-# aws configure set region us-west-2 --profile minio
-
-
-echo -e "${li:?}Initializing DeepRacer for Cloud..."
 bin/init.sh
+popd
 
 echo -e "${ok:?}DeepRacer for Cloud installed!"
 set +e
