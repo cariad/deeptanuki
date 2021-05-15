@@ -7,6 +7,7 @@ set -e
   ./scripts/update.sh
   ./scripts/install-cuda.sh
   ./scripts/install-docker.sh
+  ./scripts/install-nvidia-container-toolkit.sh
 . ./scripts/configure-bashrc.sh
 
 echo -e "${ok:?}Bootstrap complete!"
