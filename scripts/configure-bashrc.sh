@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
-set -e
+# set -e
 
-tanukirc_line=". ~/.deeptanuki/data/bashrc.sh"
+# tanukirc_line=". ~/.deeptanuki/data/bashrc.sh"
 
-if ! grep -q "${tanukirc_line:?}" ~/.bashrc; then
-  echo -e "${li:?}Configuring bashrc..."
-  echo "${tanukirc_line:?}" >> ~/.bashrc
-  echo -e "${ok:?}Configured bashrc!"
-else
-  echo -e "${ok:?}bashrc already configured."
-fi
+# if ! grep -q "${tanukirc_line:?}" ~/.bashrc; then
+#   echo -e "${li:?}Configuring bashrc..."
+#   echo "${tanukirc_line:?}" >> ~/.bashrc
+#   echo -e "${ok:?}Configured bashrc!"
+# else
+#   echo -e "${ok:?}bashrc already configured."
+# fi
 
-echo -e "${li:?}Importing bashrc..."
-eval "${tanukirc_line:?}"
+# echo -e "${li:?}Importing bashrc..."
+# eval "${tanukirc_line:?}"
 
-echo -e "${ok:?}Imported bashrc!"
-set +e
+# echo -e "${ok:?}Imported bashrc!"
+# set +e
