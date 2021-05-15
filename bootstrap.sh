@@ -5,7 +5,7 @@ set -e
 . ./scripts/style.sh
   ./scripts/preamble.sh
   ./scripts/update.sh
-  ./scripts/install-cuda-drivers.sh
+  ./scripts/install-cuda.sh
   ./scripts/install-docker.sh
 . ./scripts/configure-bashrc.sh
 

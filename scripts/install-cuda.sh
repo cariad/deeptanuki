@@ -46,7 +46,7 @@ rm -rf ~/.deeptanuki/cuda-samples/
 cuda-install-samples-11.3.sh ~/.deeptanuki/cuda-samples
 
 echo -e "${li:?}Building CUDA code samples..."
-pushd ~/.deeptanuki/cuda-samples/
+pushd ~/.deeptanuki/cuda-samples/NVIDIA_CUDA_11.3_Samples
 make
 popd
 
