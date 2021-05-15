@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 set -e
 
+echo -e "${li:?}Installing Python packages..."
+sudo apt install python3-pip
+python3 -m pip install boto3
+python3 -m pip install nvidia-pyindex
+python3 -m pip install nvidia-cuda-cupti
+python3 -m pip install tensorflow
+
 echo -e "${li:?}Installing DeepRacer for Cloud..."
 
 deepracer_dir=~/.deeptanuki/deepracer-for-cloud
