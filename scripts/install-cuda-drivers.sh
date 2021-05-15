@@ -41,5 +41,20 @@ else
   echo -e "${ok:?}${rules_path:?} already configured."
 fi
 
+echo -e "${li:?}Installing CUDA code samples..."
+rm -rf ~/.deeptanuki/cuda-samples/
+cuda-install-samples-11.3.sh ~/.deeptanuki/cuda-samples
+
+echo -e "${li:?}Building CUDA code samples..."
+pushd ~/.deeptanuki/cuda-samples/
+make
+popd
+
+echo -e "${li:?}Querying GPU..."
+~/.deeptanuki/cuda-samples/bin/x86_64/linux/release/deviceQuery
+
+echo -e "${li:?}Testing GPU bandwidth..."
+~/.deeptanuki/cuda-samples/bin/x86_64/linux/release/bandwidthTest
+
 echo -e "${ok:?}CUDA drivers installed!"
 set +e
