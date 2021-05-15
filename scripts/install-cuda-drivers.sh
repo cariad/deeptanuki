@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-
 echo -e "${li:?}Installing Linux headers..."
 sudo apt install "linux-headers-$(uname -r)" --yes
 
@@ -18,6 +17,9 @@ echo -e "${li:?}Downloading NVIDIA repository..."
 sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
 
 ./scripts/update.sh
+
+echo -e "${li:?}Installing libnvidia extras..."
+sudo apt install libnvidia-extra-465 --yes
 
 echo -e "${li:?}Installing CUDA toolkit..."
 sudo apt install cuda --yes
