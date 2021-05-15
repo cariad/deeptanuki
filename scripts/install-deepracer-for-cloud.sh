@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 set -e
 
+sudo apt install build-essential
+sudo apt install cmake unzip zip
+sudo apt install python-dev python3-dev python-pip python3-pip
+
+
 echo -e "${li:?}Installing Python packages..."
 sudo apt install python3-pip
 python3 -m pip install boto3
