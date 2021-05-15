@@ -24,5 +24,22 @@ sudo apt install libnvidia-extra-465 --yes
 echo -e "${li:?}Installing CUDA toolkit..."
 sudo apt install cuda --yes
 
+echo -e "${li:?}Enabling nvidia-persistenced..."
+sudo systemctl enable nvidia-persistenced
+
+memory_line='SUBSYSTEM=="memory", ACTION=="add"'
+rules_path=/lib/udev/rules.d/40-vm-hotadd.rules
+
+if grep -q "${memory_line:?}" "${rules_path:?}"; then
+  echo -e "${li:?}Configuring ${rules_path:?}..."
+
+  sudo cp "${rules_path:?}" /etc/udev/rules.d
+  sudo sed -i "/${memory_line}/d" "${rules_path:?}"
+
+  echo -e "${li:?}Configured ${rules_path:?}!"
+else
+  echo -e "${ok:?}${rules_path:?} already configured."
+fi
+
 echo -e "${ok:?}CUDA drivers installed!"
 set +e
