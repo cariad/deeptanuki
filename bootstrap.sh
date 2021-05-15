@@ -10,6 +10,7 @@ set -e
   ./scripts/install-docker.sh
   ./scripts/install-nvidia-container-toolkit.sh
 . ./scripts/configure-bashrc.sh
+  ./scripts/install-deepracer-for-cloud.sh
 
 echo -e "${ok:?}Bootstrap complete!"
 
