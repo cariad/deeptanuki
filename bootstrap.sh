@@ -6,6 +6,7 @@ set -e
   ./scripts/preamble.sh
   ./scripts/update.sh
   ./scripts/install-cuda-drivers.sh
+  ./scripts/install-docker.sh
 . ./scripts/configure-bashrc.sh
 
 echo -e "${ok:?}Bootstrap complete!"
