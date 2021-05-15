@@ -13,5 +13,12 @@ pushd "${deepracer_dir:?}"
 git checkout v3.1
 popd
 
+
+# aws configure set region us-west-2 --profile minio
+
+
+echo -e "${li:?}Initializing DeepRacer for Cloud..."
+bin/init.sh
+
 echo -e "${ok:?}DeepRacer for Cloud installed!"
 set +e
