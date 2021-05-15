@@ -6,6 +6,7 @@ set -e
   ./scripts/preamble.sh
   ./scripts/update.sh
   ./scripts/install-cuda.sh
+  ./scripts/install-curl.sh
   ./scripts/install-docker.sh
   ./scripts/install-nvidia-container-toolkit.sh
 . ./scripts/configure-bashrc.sh
