@@ -14,8 +14,9 @@ set -e
   ./scripts/install-cuda.sh
   ./scripts/install-docker.sh
   ./scripts/install-nvidia-container-toolkit.sh
-. ./scripts/configure-bashrc.sh
   ./scripts/install-deepracer-for-cloud.sh
+
+. ./scripts/configure-bashrc.sh
 
 echo -e "${ok:?}Bootstrap complete!"
 
