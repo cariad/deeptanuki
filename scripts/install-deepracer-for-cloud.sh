@@ -5,12 +5,7 @@ echo -e "${li:?}Installing DeepRacer for Cloud..."
 
 deepracer_dir=~/.deeptanuki/deepracer-for-cloud
 
-if [ -d "${deepracer_dir:?}" ]; then
-  pushd "${deepracer_dir:?}"
-  git fetch
-  git pull
-  popd
-else
+if [ ! -d "${deepracer_dir:?}" ]; then
   git clone https://github.com/aws-deepracer-community/deepracer-for-cloud.git "${deepracer_dir:?}"
 fi
 
