@@ -19,8 +19,10 @@ sudo /tmp/aws/install --update
 rm -rf /tmp/aws
 
 echo -e "${li:?}Configuring minio profile..."
-aws configure set username minio-user     --profile minio
-aws configure set password minio-password --profile minio
+aws configure set default.region        us-east-1
+
+aws configure set aws_access_key_id     minio-access-key        --profile minio
+aws configure set aws_secret_access_key minio-secret-access-key --profile minio
 
 echo -e "${ok:?}Installed AWS CLI!"
 set +e
