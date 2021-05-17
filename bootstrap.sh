@@ -17,6 +17,7 @@ set -e
   ./scripts/install-deepracer-local.sh
 
 . ./scripts/configure-bashrc.sh
+  ./scripts/install-bin.sh
 
 echo -e "${ok:?}Bootstrap complete!"
 
