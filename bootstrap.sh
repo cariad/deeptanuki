@@ -14,7 +14,7 @@ set -e
   ./scripts/install-cuda.sh
   ./scripts/install-docker.sh
   ./scripts/install-nvidia-container-toolkit.sh
-  ./scripts/install-deepracer-for-cloud.sh
+  ./scripts/install-deepracer-local.sh
 
 . ./scripts/configure-bashrc.sh
 
