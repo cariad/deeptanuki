@@ -12,6 +12,9 @@ curl -s -L "https://nvidia.github.io/nvidia-docker/${distribution:?}/nvidia-dock
 echo -e "${li:?}Installing nvidia-docker2..."
 sudo apt install nvidia-docker2 --yes
 
+echo -e "${ok:?}Setting default Docker runtime..."
+sudo cp ./data/daemon.json /etc/docker/
+
 echo -e "${li:?}Restarting Docker..."
 sudo systemctl restart docker
 
