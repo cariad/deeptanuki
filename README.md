@@ -35,6 +35,8 @@ This setup fits my way of working, but it might not be right for you. My develop
     ./setup.sh
     ```
 
+1. Reboot.
+
 ## Training
 
 1. **On your development machine:** update the [mattcamp/deepracer-local](https://github.com/mattcamp/deepracer-local) `config.env`, model metadata, reward function and training parameters in your fork of the training repository.
