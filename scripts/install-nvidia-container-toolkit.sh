@@ -18,5 +18,4 @@ sudo cp ./data/daemon.json /etc/docker/
 echo -e "${li:?}Restarting Docker..."
 sudo systemctl restart docker
 
-echo -e "${ok:?}NVIDIA Container Toolkit installed!"
 set +e

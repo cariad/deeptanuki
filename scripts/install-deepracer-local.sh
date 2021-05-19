@@ -7,7 +7,6 @@ if [ ! -d ~/.deeptanuki/deepracer-local ]; then
   pushd ~/.deeptanuki/deepracer-local
   git checkout 1.0
   popd
-  echo -e "${ok:?}mattcamp/deepracer-local installed!"
 fi
 
 echo -e "${ok:?}Creating sagemaker-local network..."

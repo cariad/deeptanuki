@@ -17,5 +17,4 @@ sudo gpasswd -a "${user:?}" docker
 echo -e "${li:?}Setting docker.sock permissions..."
 sudo chmod 666 /var/run/docker.sock
 
-echo -e "${ok:?}Installed Docker!"
 set +e

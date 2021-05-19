@@ -16,7 +16,6 @@ set -e
   ./scripts/install-nvidia-container-toolkit.sh
   ./scripts/install-deepracer-local.sh
 
-. ./scripts/configure-bashrc.sh
   ./scripts/install-bin.sh
 
 echo -e "${ok:?}Bootstrap complete!"
